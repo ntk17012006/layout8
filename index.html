@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline-block Example</title>
+    <style>
+        body{
+            width: 100%;
+            height:100px;
+        }
+        .block{
+            width: 100%;   /*rộng*/
+            height: 100px; /*ngang*/
+            text-align: center;
+        }
+        .outer-layout {
+            display: block; /* Kích hoạt flexbox */
+            background-color: rgb(244, 225, 225);
+            width: 100%;
+            height: 1402px;
+        }
+        .bot{
+            position: absolute;
+            top: 5%;
+            background-color: white;
+            width: 1200px;
+            height: 30px;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 6px;
+            margin: 15px;/* Khoảng cách giữa các khối */
+        }
+        .rd{
+            background-image:url(https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/458775688_3511494802433400_1153022249496206155_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9eae26&_nc_eui2=AeHMCcCK04cPqFrdXAbzqvrANd8txXsbGUM13y3FexsZQ4xa_KANTtGAn5SlV8HUoIDbhUW5JG6n_BKIqH0SpcT2&_nc_ohc=URXRux0cD10Q7kNvgGJcGil&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=AMvK6VKRKyGDh5uXlkhucCM&oh=00_AYDizmdTK9aK8T8OrL6NtumMXhdIt26B6ODkO0GuDXvcSQ&oe=67266956);
+            background-size: cover; /* Giữ tỷ lệ và lấp đầy */
+            background-position: center; /* Căn ảnh ở giữa */
+            width: 82%;
+            float: left;
+            height: 200px;
+            margin-bottom:10px;
+            margin-left:10px;
+            margin-right:20px;
+        }
+        .bd{
+            background-image:url(https://quansu.haiphong.gov.vn/upload/quansu/product/2023/8/356861860_2573266732827286_7554705490153151367_n1-4384ffbe5ef2471da9358d8425556dc5.jpg?maxwidth=2048);
+            background-size: cover; /* Giữ tỷ lệ và lấp đầy */
+            background-position: center; /* Căn ảnh ở giữa */
+            width: 45%;
+            float: right;
+            height: 200px;  
+            margin-left: 10px;
+        }
+        .bl{
+            background-image:url(https://www.tuoitrephuyen.vn/uploads/news/2022_09/trong-cay.jpg);
+            background-size: cover; /* Giữ tỷ lệ và lấp đầy */
+            background-position: center; /* Căn ảnh ở giữa */
+            width: 45%;
+            float: left;
+            height: 200px;
+            margin-left: 10px;
+        }
+        .pe{
+            background-image:url(https://doanhnhanplus.vn/wp-content/uploads/2013/08/3a-Moi-tuong.jpg);
+            background-size: cover; /* Giữ tỷ lệ và lấp đầy */
+            background-position: center; /* Căn ảnh ở giữa */
+            width: 45%;
+            float: left;
+            height: 200px;
+            margin-left: 10px;
+        }
+        .yl{
+            background-image:url(https://www.pace.edu.vn/uploads/news/2024/03/2-tam-quan-trong-cua-moi-truong-xanh.jpg);
+            background-size: cover; /* Giữ tỷ lệ và lấp đầy */
+            background-position: center; /* Căn ảnh ở giữa */
+            width: 40%;
+            height: 420px;
+            float: left;
+            margin: 10px;
+        }
+        .gl{
+            background-image:url(https://ktmt.vnmediacdn.com/images/2022/03/16/5-1647413580-hinh-anh-bao-ve-moi-truong-dep-va-y-nghia-kinhtemoitruong-20.jpg);
+            background-size: cover; /* Giữ tỷ lệ và lấp đầy */
+            background-position: center; /* Căn ảnh ở giữa */
+            font-size: 30px;
+            width: 100%;
+            float: left;
+            height: 300px;
+            color: rgb(243, 4, 4);
+            text-align: center;
+            font-size: 30px;
+        }
+        .bk{
+            background-image:url(https://media.tapchitaichinh.vn/images/upload//2024/08/25/9878-1697533380-z4791854487897-d411435ed5d6998b03ac2f9d66e25c23.jpg);
+            background-size: cover; /* Giữ tỷ lệ và lấp đầy */
+            background-position: center; /* Căn ảnh ở giữa */
+            width: 45%;
+            float: right;
+            height: 200px;
+            margin-left: 10px;
+        }
+        
+        
+        .db{
+            background-image:url(https://gocnhinthoidai.com/wp-content/uploads/2021/07/nhung-mo-hinh-bao-ve-moi-truong-doc-dao-va-thiet-thuc-nhat-unnamed.png);
+            background-size: cover; /* Giữ tỷ lệ và lấp đầy */
+            background-position: center; /* Căn ảnh ở giữa */
+            width: 100%;
+            float: left;
+            height: 300px;
+            margin-bottom: 45px;
+        }
+        .ab{
+            margin-left: 300px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 68%;
+            height: 780px;
+            float: left;
+            font-size: 20px;
+        }
+        .bc{
+            display: block;
+            width: 40%;
+            height: 200px;
+            float: left;  
+            margin: 10px;
+        }
+        .cd{
+            display: block;
+            width: 40%;
+            height: 200px;
+            float: left; 
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+<div class="outer-layout">
+    <div class="block gl">
+        <nav class="bot">
+        <a href="">Trang Chủ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="">Khung Hoạt Động</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="">Thành Viên</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="">Hoạt Động Tiêu Biểu</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="">Thông Tin Hoạt Động</a>
+    </nav>
+        </div>
+    <div class="ab">
+        <center><h2>🌱CHUNG TAY BẢO VỆ MÀU XANH !!!🌳</h2>
+            <p>Với những hoạt động đầy năng lượng tích cực để bảo vệ mà xanh trên Trái Đất</p></center>
+    <div class="block yl"></div>
+    <div class="block bc">
+        <div class="block pe"></div>
+        <div class="block bk"></div></div>
+    <div class="bkock cd">
+        <div class="block bl"></div>
+        <div class="block bd"></div></div>
+    <div class="block rd"></div>
+      </div>
+    <div class="block db"></div>
+</div>
+</body>
+</html>
